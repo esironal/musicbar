@@ -1,0 +1,207 @@
+track-info-width = 16rem
+track-height = 3rem
+track-height-expanded = 14rem
+value-row-height = 9px
+color-track-info-background = #eee
+
+.sequencer
+  .arrangement
+    margin-top 8rem // height of header
+    position relative
+    -moz-user-select -moz-none
+    -khtml-user-select none
+    -webkit-user-select none
+    -ms-user-select none
+    user-select none
+    .cursor
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      z-index -1
+      margin-left track-info-width
+      &.primary
+        background color-belize-hole
+        opacity 0.25
+      &.marker
+        width 1px
+        border-left 1px solid #bbb
+    .tracks
+      .track
+        height track-height
+        position relative
+        &.expanded
+          height track-height-expanded
+          .notes
+            height track-height-expanded
+            overflow scroll
+          .notes .summary
+            display none
+          .notes .full
+            display block
+          .separator
+            top track-height-expanded
+        &.color-1
+          .info
+            background color-pomegranate
+        &.color-2
+          .info
+            background color-green-sea
+        &.color-3
+          .info
+            background color-midnight-blue
+        &.color-4
+          .info
+            background color-orange
+        &.muted
+          .info
+            opacity 0.5
+        .notes
+          margin-left track-info-width
+          position relative
+          .summary
+            display block
+          .full
+            display none
+            .value-row
+              position relative
+              height value-row-height
+              .value
+                font-weight 700
+                font-size value-row-height
+                line-height 1
+                color color-wet-asphalt
+                // HACK
+                // We don't really want the values to register at all
+                // on the DOM as far as the box model goes because we'll be
+                // clicking stuff around there. Just make it really small
+                // and let the actual text overflow.
+                // This is sort of like setting display: inline-block;
+                // except it actually works for this case.
+                width 1px
+                overflow visible
+              .row-separator
+                position absolute
+                right 0
+                left 0
+                z-index -1
+                margin-top value-row-height
+                height 1px
+                border-top 1px solid #e2e2e2
+              .note
+                height value-row-height
+                top 0
+          .note
+            height track-height
+            width 5rem
+            background color-amethyst
+            position absolute
+        .separator
+          position absolute
+          right 0
+          left 0
+          z-index -1
+          top track-height
+          height 1px
+          border-top 1px solid #ccc
+        .info
+          position absolute
+          z-index 100
+          top 0
+          left 0
+          height track-height
+          width track-info-width
+          background color-track-info-background
+          color white
+          padding 0.5rem
+          padding-left 0
+          .identifier
+            width 70%
+            float left
+            .number
+              float left
+              padding 4px 0
+              width 2rem
+              text-align center
+              color rgba(255, 255, 255, 0.7)
+            .name
+              float left
+              font-size 1.5rem
+              line-height 1
+              font-weight 300
+              padding-top 3px
+          .controls
+            display block
+            width 30%
+            float left
+            padding 2px 0
+            button
+              width 24px
+              height 24px
+              margin 0 2px
+              color white
+              float right
+              &.mute
+                background color-wet-asphalt
+                &.active
+                  background color-wet-asphalt
+              &.delete
+                background color-alizarin
+              &.active
+                background color-sun-flower
+  .bottom-controls
+    height 8rem
+    position fixed
+    z-index 200
+    bottom 0
+    left 0
+    right 0
+    padding 1rem
+    background #333
+    color white
+    h3
+      margin 0
+      margin-bottom 0.5rem
+    .section
+      float left
+      height 8rem
+      margin 0 2em
+      &:first-child
+        margin-left 0
+      &:last-child
+        margin-right 0
+      &.instructions
+        width 26rem
+        font-size 13px
+        p
+          font-weight 300
+      &.add-track
+        button
+          display block
+          margin-top 0.75rem
+      &.select-tool
+        opacity 0.5
+        button
+          margin 0 0.25rem
+          &:first-child
+            margin-left 0
+          &:last-child
+            margin-right 0
+      &.transport
+        button
+          margin 0 0.25rem
+          &:first-child
+            margin-left 0
+          &:last-child
+            margin-right 0
+      &.credits
+        float right
+        text-align right
+        color color-clouds
+        p
+          margin-bottom 5px
+          font-weight 300
+          a
+            color white
+            border-bottom 1px solid color-belize-hole
+            text-decoration none

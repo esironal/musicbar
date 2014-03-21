@@ -1,0 +1,122 @@
+@import 'grid.styl'
+@import 'flatuicolors.styl'
+@import 'sequencer.styl'
+
+*
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  // text-rendering optimizeLegibility
+  // -webkit-text-size-adjust none
+  // -moz-font-feature-settings 'kern=1'
+  // -moz-font-feature-settings 'kern' 1
+  // -webkit-font-feature-settings 'kern' 1
+  // -o-font-feature-settings 'kern' 1
+  // -ms-font-feature-settings 'kern' 1
+  // font-feature-settings 'kern' 1
+  // -moz-font-feature-settings 'liga=1'
+  // -moz-font-feature-settings 'liga' 1
+  // -webkit-font-feature-settings 'liga' 1
+  // -o-font-feature-settings 'liga' 1
+  // -ms-font-feature-settings 'liga' 1
+  // font-feature-settings 'liga' 1
+
+p
+  margin-bottom 1em
+
+html, body
+  padding 0
+  margin 0
+  font-size 14px
+
+body
+  background-color #f6f6f6
+  // font-family 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  color #222
+  margin 0 
+
+h1, h2, h3, h4, h5, h6
+  -webkit-font-smoothing antialiased
+  font-family 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight 200
+
+.grid
+  width 1200px
+  margin 0 auto
+  .col6
+    width (1200px/2)
+    float left
+
+#header
+  background color-belize-hole
+  color white
+  margin 0
+  padding 0.5rem 2rem
+  position fixed
+  top 0
+  left 0
+  right 0
+  height 8rem
+  .left
+    float left
+    width 50%
+    .logo
+      a
+        color white
+        text-decoration none
+        h1
+          font-variant small-caps
+          margin 0
+          line-height 1
+          font-size 5rem
+          margin-top 0.5rem
+  .right
+    float left
+    width 50%
+    .user-login-and-profile
+      .user-profile
+        float right
+        margin-top 2rem
+      .user-login
+        float right
+        width 250px
+        .form-group
+          margin 5px 0
+          & first-child
+            margin-top 0
+          & last-child
+            margin-bottom 0
+          input, button
+            width 100%
+            border-radius 0
+            border 0
+          #login-input-password
+            float left
+            width 70%
+            margin-right 1%
+          #login-input-submit
+            float left
+            width 28%
+            margin-left 1%
+            padding 7px 12px
+        .registration
+          a
+            color white
+            float right
+
+#content
+  margin-top 8rem // height of header
+  .call-to-action
+    padding 1rem
+    border-left 5px solid color-belize-hole
+    margin 2rem 0
+    background white
+    .text
+      font-size 2rem
+      line-height 1.25
+      color #333
+      float left
+    .button
+      padding 1rem 0
+      float right

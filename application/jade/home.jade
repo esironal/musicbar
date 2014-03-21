@@ -1,0 +1,53 @@
+extends main
+
+block content
+  #sequencer.sequencer
+    .arrangement
+      .tracks
+    .bottom-controls.clearfix
+      .section.instructions
+        h3 Welcome to MusicBar
+        p
+          | To start composing, click on any track to add a note. 
+          | To add specific notes instead of the default middle C, click 
+          | on a track's name to expand the piano roll. Happy composing!
+      .section.add-track
+        h3 Add track
+        select
+        button.btn.btn-xs.btn-primary Add
+      .section.transport
+        h3 Transport
+        button#button-playpause.btn.btn-primary
+          span.glyphicon.glyphicon-play
+        button#button-oneone.btn.btn-primary
+          span.glyphicon.glyphicon-fast-backward
+      .section.select-tool
+        h3 Select tool (Premium)
+        button.btn.btn-success(value='1')
+          span.glyphicon.glyphicon-plus
+        button.btn.btn-primary(value='2')
+          span.glyphicon.glyphicon-remove
+        button.btn.btn-primary(value='3')
+          span.glyphicon.glyphicon-pencil
+      .section.credits
+        p
+          | MusicBar
+          br
+          | by 
+          a(href="mailto:vlad@vladh.net") Team Duck
+        img(src='img/uom.png', width='100px')
+
+block scripts
+  script(src="js/howler.min.js")
+  script(src="js/underscore-min.js")
+  script(src="js/classList.min.js")
+  script(src="js/events.js")
+  script(src="js/exceptions.js")
+  script(src="js/Song.js")
+  script(src="js/Grid.js")
+  script(src="js/Note.js")
+  script(src="js/Instrument.js")
+  script(src="js/Library.js")
+  script(src="js/Track.js")
+  script(src="js/Sequencer.js")
+  script(src="js/home.js")

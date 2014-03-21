@@ -1,0 +1,11 @@
+grid-column-count = 12
+grid-width = 100rem
+grid-column-width = grid-width / grid-column-count
+.grid
+  clearfix()
+  width grid-width
+  margin 0 auto
+  for num in (1..grid-column-count)
+    .col{num}
+      float left
+      width (num * grid-column-width)

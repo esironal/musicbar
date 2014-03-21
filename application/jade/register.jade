@@ -1,0 +1,45 @@
+extends main
+
+block content
+  #content.content-register
+    .deco-container
+      .page-container
+        .content-wrapper.grid
+          .col3
+            p
+          #registration.deco-container.page-content.page-content-card.col6
+            .deco-border.deco-border-inner
+              .component-top
+              .component-right
+              .component-bottom
+              .component-left
+            .deco-border.deco-border-offset-vertical
+              .component-top
+              .component-right
+              .component-bottom
+              .component-left
+            .deco-border.deco-border-offset-horizontal
+              .component-top
+              .component-right
+              .component-bottom
+              .component-left
+            .inner-content
+              h2 Start writing music
+              .deco-container
+                .deco-heading-epilogue
+                  .component-line.component-line-one
+                  .component-line.component-line-two
+              form(onsubmit="return false;")
+                .form-group
+                  input#registration-form-input-email.form-control(type="text", placeholder="Your e-mail address")
+                .form-group
+                  input#registration-form-input-password.form-control(type="password", placeholder="Your password")
+                .form-group
+                  input#registration-form-input-password-confirmation.form-control(type="password", placeholder="Your password (again)")
+                .form-group
+                  button#registration-form-input-submit.form-control.btn.btn-primary.btn-deco Join MusicBar
+          .col3
+            p
+
+block scripts
+  script(type="text/javascript", src="js/register.js")
